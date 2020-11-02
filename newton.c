@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <math.h>
 
-double f( double x ) { //f(x)の定義
+double f( double x ) {     /*f(x)の定義*/
 
-	return ( 3 * x * x + 2 * x - 5 );
+	return ( x - cos(x) );
 }
-　
-double df( double x ) { //f'(x)の定義
 
-	return ( 6 * x + 2 );
+double df( double x ) {    /*f'(x)の定義*/
+
+	return ( 1 + sin(x) );
 }
 
 int main(void) {
 
-	int n = 0; //関数定義
+	int n = 0;  /*変数定義*/
 	int nmax;
 	double x, delta;
 	double eps;
@@ -27,15 +27,15 @@ int main(void) {
 	
 	do {
 		delta = -f(x) / df(x);
-		x = x + delta
+		x = x + delta;
 		n++;
-		printf ("誤差 = %f x = %f\n", delta, x); //誤差と計算結果の表示
+		printf ("誤差 = %f x = %f\n", delta, x);  /*誤差と計算結果の表示*/
 	}
 	while ( fabs(delta) > eps && n <= nmax );
 	if ( n == nmax)	{
-		printf ( "解が見つからない\n"); //n=nmaxのとき解が見つからない
+		printf ( "解が見つからない\n");   /*n = nmaxのとき解が見つからない*/
 	} else {
-		printf ( " x = %fで収束\n" , x);　//n=nmaxでないとき収束
+		printf ( " x = %fで収束\n" , x);  /*n = nmaxでないとき収束*/
 	}
 	
 	return 0;
