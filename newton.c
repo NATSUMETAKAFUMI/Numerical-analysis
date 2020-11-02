@@ -24,19 +24,20 @@ int main(void) {
 	scanf ("%lf", &eps);
 	printf ("最大繰り返し回数nmaxを入力してください\n");
 	scanf ("%d", &nmax);
-
+	
 	do {
 		delta = -f(x) / df(x);
 		x = x + delta;
 		n++;
+		printf ("誤差 = %f x = %f\n", delta, x);
 	}
 	while ( fabs(delta) > eps && n <= nmax );
 	if ( n == nmax)	{
-		printf ( "解が見つからない/n");
+		printf ( "解が見つからない\n");
 	} else {
-		printf ( "x = %f\n" , x);
+		printf ( " x = %fで収束\n" , x);
 	}
-
+	
 	return 0;
 
 }
