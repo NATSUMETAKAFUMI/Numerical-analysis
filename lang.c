@@ -7,10 +7,10 @@ int main(void) {
 	int i;
 
 	if((fp1 = fopen("text.txt","r" )) == NULL) { //読み込み用オープン
-		fprintf (fp1,"text.txtは見つかりませんでした\n"); //書き込み用オープン
+		fprintf (fp1,"text.txtは見つかりませんでした\n");
 	}
 	
-	if((fp2 = fopen("text2.txt","w" )) == NULL) {
+	if((fp2 = fopen("text2.txt","w" )) == NULL) { //書き込み用オープン
 		fprintf(fp2, "text2.txtは見つかりませんでした\n");
 	}
 
