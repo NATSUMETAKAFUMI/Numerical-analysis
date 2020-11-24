@@ -21,16 +21,16 @@ int main(void) {
 	 printf("nの値を入力してください\n");
 	 scanf("%lf",&n);
 
-	 fx = 1 / n;
+	 fx = 1 / n; //各変数の初期値の設定
 	 x1 = 1;
-	 x2 = fx;
+	 x2 = 1 + fx;
 	 sumy = 0;
 
 	 while(1) {
 		 y1 = get_y1(x1);
 		 y2 = get_y2(x2);
 		
-		 sumy = sumy + y1 + y2;
+		 sumy = sumy + y1 + y2; //yの合計の計算
 
 		 if (x2 >= 2) {
 			 break;
@@ -41,7 +41,7 @@ int main(void) {
 
 		 }
 
-	 dfx = fx * sumy / 2;
+	 dfx = fx * sumy / 2; //解の計算
 
 	 printf("deltax = %f\n", fx);
 	 printf("解 = %lf\n", dfx);
