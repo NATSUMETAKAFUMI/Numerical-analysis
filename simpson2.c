@@ -10,7 +10,7 @@ double get_y2 (double x2)
         return (1 / x2);
 }
 
-double get_y3 ((double x3)
+double get_y3 (double x3)
 {
         return (1 / x3);
 }

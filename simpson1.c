@@ -10,7 +10,7 @@ double get_y2 (double x2)
 	return (x2 * x2 * x2 * x2 - 2 * x2 * x2 * x2 + x2 * x2 - 3 * x2 + 1);
 }
 
-double get_y3 ((double x3) 
+double get_y3 (double x3) 
 {
 	return (x3 * x3 * x3 * x3 - 2 * x3 * x3 * x3 + x3 * x3 - 3 * x3 + 1);
 }
