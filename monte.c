@@ -21,7 +21,7 @@ int main() {
 	}
 
 	pi = (double)count / max * 4; //円周率の近似式
-	printf("%f\n", pi);  //
+	printf("%f\n", pi);  //結果の出力
 
 	return 0;
 
