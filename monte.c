@@ -15,8 +15,8 @@ int main() {
 	for (i = 0; i < max; i++) {
 		x = (double)rand() / RAND_MAX;  //xの乱数
 		y = (double)rand() / RAND_MAX;  //yの乱数
-		z = x * x + y * y;  //円の方程式
-		if (z < 1) 
+		z = (x - 0.5) * (x - 0.5) + (y - 0.5) * (y - 0.5);  //円の方程式
+		if (z <= 0.5 * 0.5) 
 			count++;
 	}
 
